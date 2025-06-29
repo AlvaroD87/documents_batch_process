@@ -32,7 +32,7 @@ public class Document {
     
     @JsonProperty("totalAPagar")
     @JacksonXmlProperty(localName = "TotalAPagar")
-    private int amount;
+    private float amount;
 
     @JsonProperty("medioPago")
     @JacksonXmlProperty(localName = "MedioPago")

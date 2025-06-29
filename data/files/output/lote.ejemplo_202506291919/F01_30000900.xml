@@ -1,0 +1,10 @@
+<?xml version"1.0" encoding="ISO-8859-1" standalone="no"?>
+<DTE version="1.0">
+    <Documento ID="30000900">
+        <Cliente>Cliente 900</Cliente>
+        <Tipo>FACTURA</Tipo>
+        <TotalAPagar>1965,22</TotalAPagar>
+        <MedioPago>PAT</MedioPago>
+    </Documento>
+</DTE>
+</xml>
