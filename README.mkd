@@ -1,0 +1,31 @@
+## Document Batch Process
+
+El presente proyecto presenta un servcio desarrollado en Java 21, utilizando Springboot y Camel.
+
+### Requisitos para testear el desarrollo
+- docker-compose v1.29 o mayor
+
+### Comandos principales
+- iniciar programa `` docker-compose up --build ``. con este comando se permite observar los mensajes de log del sistema en caso de tener algún problema en la ejecución.
+- detener programa `` docker-compose down ``
+
+### Funcionamiento del sistema
+El proyecto tiene definida la ruta de carpeta `` data/files `` la cual se debe mantener para el funcionamiento del sistema, dado que el mismo se gatilla al llevar el archivo json a la carpeta `` files ``. Una vez que los datos son procesados, el sistema creará una subcarpeta `` data/files/output/<nombre_de_archivo>_<datetime_del_proceso> `` donde __nombre_de_archivo__ corresponde al nombre del archivo procesado y __datetime_del_proceso__ corresponde a la fecha y hora de inicio del procesamiento en formato _yyyyMMdd_. Dentro de la subcarpeta resultante se almacenarán tres tipos de archivos:
+- archivos xml: corresponden a los archivos xml solicitados en los requerimientos del sistema.
+- archivo html: corresponde al archivo de reporte solicitado en los requerimientos del sistema.
+- archivo json: corresponde a un archivo de reporte del procesamiento del archivo, siendo el formato como sigue
+    ```json
+    {
+        "Nombre de Archivo": <nombre del archivo procesado>,
+        "Cantidad de documentos": <cantidad de documentos que contiene el archivo procesado>,
+        "Cantidad de documentos procesados": <cantidad de archivos procesados por el sistema>,
+        "Datetime inicio de procesamiento": <datetime de inicio del procesamiento>,
+        "Datetime fin de procesamiento": <datetime del fin del procesamiento>,
+        "Delta time de procesamiento": {
+            "Horas": <cantidad de horas en procesar los documentos>,
+            "Minutos": <cantidad de minutos en procesar los documentos>,
+            "Segundos": <cantidad de segundos en procesar los documentos>,
+            "Milisegundos": <cantidad de milisegundos en procesar los documentos>
+        }
+    }
+    ```
