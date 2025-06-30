@@ -16,16 +16,16 @@ El proyecto tiene definida la ruta de carpeta `` data/files `` la cual se debe m
 - archivo json: corresponde a un archivo de reporte del procesamiento del archivo, siendo el formato como sigue
     ```json
     {
-        "Nombre de Archivo": <nombre del archivo procesado>,
-        "Cantidad de documentos": <cantidad de documentos que contiene el archivo procesado>,
-        "Cantidad de documentos procesados": <cantidad de archivos procesados por el sistema>,
-        "Datetime inicio de procesamiento": <datetime de inicio del procesamiento>,
-        "Datetime fin de procesamiento": <datetime del fin del procesamiento>,
+        "Nombre de Archivo": "<nombre del archivo procesado>",
+        "Cantidad de documentos": "<cantidad de documentos que contiene el archivo procesado>",
+        "Cantidad de documentos procesados": "<cantidad de archivos procesados por el sistema>",
+        "Datetime inicio de procesamiento": "<datetime de inicio del procesamiento>",
+        "Datetime fin de procesamiento": "<datetime del fin del procesamiento>",
         "Delta time de procesamiento": {
-            "Horas": <cantidad de horas en procesar los documentos>,
-            "Minutos": <cantidad de minutos en procesar los documentos>,
-            "Segundos": <cantidad de segundos en procesar los documentos>,
-            "Milisegundos": <cantidad de milisegundos en procesar los documentos>
+            "Horas": "<cantidad de horas en procesar los documentos>",
+            "Minutos": "<cantidad de minutos en procesar los documentos>",
+            "Segundos": "<cantidad de segundos en procesar los documentos>",
+            "Milisegundos": "<cantidad de milisegundos en procesar los documentos>"
         }
     }
     ```
